@@ -1,13 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="index.js" defer></script>
-    <title>Weather-app</title>
-</head>
-<body>
-    
-</body>
-</html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Weather-app</title>
+    </head>
+    <body>
+        <h1>Weather app</h1>
+        <div class="query">
+            <div class="radioBtns">
+                <div class="radioDiv">
+                    <label for="C">°C</label>
+                    <input type="radio" value="metric" id="C" name="unit" checked>
+                </div>
+                <div class="radioDiv">
+                    <label for="F">°F</label>
+                    <input type="radio" value="us" id="F" name="unit">
+                </div>
+            </div>
+            <input type="text" name="city" id="cityInput">
+            <button type="button" id="getForecastBtn">Get Forecast</button>
+        </div>
+        <main>
+            <div class="card">
+                <div class="textPart">
+                    <div class="date">Now</div>
+                    <div class="nowTemps">
+                        <div class="currentTemp" id="currentTemp"></div>
+                        <div class="currentFeels" id="currentFeels"></div>
+                    </div>
+                </div>
+                <img src="" id="currentIcon">
+            </div>
+            <div class="card">
+                <div class="textPart">
+                    <div class="date">Today</div>
+                    <div class="Temps">
+                        <div class="minTemp" id="todayMinTemp"></div>
+                        <div class="maxTemp" id="todayMaxTemp"></div>
+                    </div>
+                </div>
+                <img src="" id="todayIcon">
+            </div>
+            <div class="card">
+                <div class="textPart">
+                    <div class="date">Tomorrow</div>
+                    <div class="Temps">
+                        <div class="minTemp" id="tomorrowMinTemp"></div>
+                        <div class="maxTemp" id="tomorrowMaxTemp"></div>
+                    </div>
+                </div>
+                <img src="" id="tomorrowIcon">
+            </div>
+        </main>
+        <script src="api.js" type="module"></script>
+        <script src="dom.js" type="module"></script>
+        <script src="index.js" type="module"></script>
+    </body>
+    </html>
