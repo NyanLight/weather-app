@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: beige;
+}
+
 h1 {
     text-align: center;
 }
@@ -9,12 +13,16 @@ h1 {
 .query {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 25px;
 }
 
 .radioBtns {
     display: flex;
     flex-direction: row;
-    gap: 5px;
+    font-weight: bold;
 }
 
 .radioDiv {
@@ -22,8 +30,89 @@ h1 {
     flex-direction: column;
 }
 
+input[type=text] {
+    margin-left: 20px;
+    padding: 5px;
+    font-size: 1.2rem;
+}
+
 main {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 15px;
+    height: 120px;
+    width: 350px;
+}
+
+.date {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+img {
+    height: 60px;
+}
+
+.currentTemps {
+    background-color: rgb(158, 241, 241);
+    width: 160px;
+    text-align: center;
+}
+
+.currentTemp {
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.currentFeels {
+    background-color: aqua;
+}
+
+.Temps {
+    display: flex;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    position: relative;    
+}
+
+.minTemp {
+    background-color: aqua;
+    width: 80px;
+    position: relative;
+    top: 10px;
+}
+
+.maxTemp {
+    background-color: rgb(158, 241, 241);
+    width: 80px;
+}
+
+button[type=button] {
+    font-weight: bold;
+    background-color: azure;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 30px;
+}
+
+button[type=button]:hover {
+    background-color: rgb(164, 247, 247);
+}
+
+button[type=button]:active {
+    transform: scale(0.9);
 }

@@ -5,6 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <title>Weather-app</title>
+        <script src="api.js" type="module"></script>
+        <script src="dom.js" type="module"></script>
+        <script src="index.js" type="module"></script>
     </head>
     <body>
         <h1>Weather app</h1>
@@ -19,14 +22,14 @@
                     <input type="radio" value="us" id="F" name="unit">
                 </div>
             </div>
-            <input type="text" name="city" id="cityInput">
+            <input type="text" name="city" id="cityInput" placeholder="Moscow">
             <button type="button" id="getForecastBtn">Get Forecast</button>
         </div>
         <main>
             <div class="card">
                 <div class="textPart">
                     <div class="date">Now</div>
-                    <div class="nowTemps">
+                    <div class="currentTemps">
                         <div class="currentTemp" id="currentTemp"></div>
                         <div class="currentFeels" id="currentFeels"></div>
                     </div>
@@ -54,8 +57,5 @@
                 <img src="" id="tomorrowIcon">
             </div>
         </main>
-        <script src="api.js" type="module"></script>
-        <script src="dom.js" type="module"></script>
-        <script src="index.js" type="module"></script>
     </body>
     </html>

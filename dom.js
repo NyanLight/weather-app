@@ -16,9 +16,8 @@ export async function buttonHandler() {
   const unit = document.querySelector('input[name="unit"]:checked').value;
   const city = cityInput.value;
   const forecast = await getForecast(city, unit);
-  console.log(currentTemp);
   currentTemp.textContent = forecast.current[0];
-  currentFeels.textContent = forecast.current[1];
+  currentFeels.textContent = `Feels like ${forecast.current[1]}`;
   currentIcon.src = `assets/${forecast.current[2]}.svg`;
   todayMin.textContent = forecast.today[0];
   todayMax.textContent = forecast.today[1];
