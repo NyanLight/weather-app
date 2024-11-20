@@ -1,5 +1,5 @@
-import { buttonHandler, getForecastBtn } from "./dom.js";
+import { buttonHandler, getForecastBtn, init } from "./dom.js";
 
 getForecastBtn.addEventListener("click", buttonHandler);
 
-buttonHandler("London", "metric");
+init();
